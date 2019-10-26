@@ -1,0 +1,28 @@
+{
+  "name": "hack100-mcr19",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kasiimh1/Hack100-MCR19.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kasiimh1/Hack100-MCR19/issues"
+  },
+  "homepage": "https://github.com/kasiimh1/Hack100-MCR19#readme",
+  "dependencies": {
+    "clockwork": "^0.1.4",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1"
+  }
+}
