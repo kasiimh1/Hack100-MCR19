@@ -1,3 +1,10 @@
+require('dotenv').config()
+
+API = process.env.API
+SMS = process.env.SMS_Number
+
+console.log('[ENV Log] ' + API + ' [ENV Log] ' + SMS)
+
 // Home Page
 exports.index = function(req, res, next) {
     res.render('index', { title: 'Express' });
@@ -15,12 +22,10 @@ exports.message = function(req, res, next) {
     password: 'oaOJKcV2V7',
     database: 'Om6tq8deNg'
   })
-
   connection.connect();
 
   connection.query('SELECT * FROM users', function (err, rows, fields) {
     if (err) throw err
-
     
     for (let i = 0; i < rows.length; i++)
     {
@@ -45,7 +50,7 @@ exports.sendMessage = function(req, res, next) {
 
 
 
-  var clockwork = require('clockwork')({key:''});
+  var clockwork = require('clockwork')({key: API});
   // Send a message
   clockwork.sendSms({ To: '', Content: 'Test!'}, function(error, resp) {
   if (error) {
