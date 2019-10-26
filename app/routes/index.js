@@ -2,21 +2,10 @@ var express = require('express');
 var router = express.Router();
 
 let index = require('../controllers/index');
-
-/* GET home page. 
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-*/
+let message = require('../controllers/message');
 
 /* GET home page. */
 router.get('/', index.index);
-
-router.get('/message', index.message);
-
-router.get('/message/send', index.sendMessage);
-
+router.get('/message', message.message);
+router.get('/message/send', message.sendMessage);
 module.exports = router;
-
-
-
